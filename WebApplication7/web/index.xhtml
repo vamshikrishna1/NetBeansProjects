@@ -1,0 +1,44 @@
+<?xml version='1.0' encoding='UTF-8' ?>
+<!DOCTYPE html PUBLIC "-//W3C//DTD XHTML 1.0 Transitional//EN" "http://www.w3.org/TR/xhtml1/DTD/xhtml1-transitional.dtd">
+<html xmlns="http://www.w3.org/1999/xhtml"  
+    xmlns:h="http://java.sun.com/jsf/html"  
+    xmlns:f="http://java.sun.com/jsf/core"  
+    xmlns:p="http://primefaces.org/ui">  
+    <h:head>
+        <title>Facelet Title</title>
+    </h:head>
+    <h:body>
+        Hi This is sample Program for Data Table
+        <h:form id="formId">
+        
+        <p:dataTable id="dataId" var="emp" value="#{dataBean.empList}">
+    <p:column headerText="EmployeeName">
+        <h:outputText value="#{emp.name}" />
+    </p:column>
+ 
+    <p:column headerText="Year">
+        <h:outputText value="#{emp.role}" />
+    </p:column>
+
+            
+            <p:column headerText="Delete Employee">
+        <p:commandButton icon="ui-icon-close" title="remove"
+                       actionListener="#{dataBean.removeEmployee(emp)}" update=":formId" />
+    
+    </p:column>
+            
+           
+
+            
+</p:dataTable>
+            <p:inputText id="empname" value="#{dataBean.name}"/>
+            <p:inputText id="emprole" value="#{dataBean.role}"/>
+            <p:commandButton value="Add Employee" actionListener="#{dataBean.newEmployee()}" update="dataId"/>
+            </h:form>
+        
+            
+            
+    </h:body>
+</html>
+
+
