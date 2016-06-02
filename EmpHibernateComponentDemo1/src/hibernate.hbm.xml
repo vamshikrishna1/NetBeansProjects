@@ -1,0 +1,18 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<!DOCTYPE hibernate-mapping PUBLIC "-//Hibernate/Hibernate Mapping DTD 3.0//EN" "http://hibernate.sourceforge.net/hibernate-mapping-3.0.dtd">
+<hibernate-mapping>
+  <class dynamic-insert="false" dynamic-update="false" mutable="true" name="emphibernatecomponentdemo1.Employee" optimistic-lock="version" polymorphism="implicit" select-before-update="false" table="Employee">
+ <id name="id">
+ <generator class="native"/>    
+ </id> 
+ <property name="name"/>
+ <property name="age"/>
+ <component name="addr" class="emphibernatecomponentdemo1.Address">
+       <property name="state"/>
+       <property name="city"/>
+       <property name="street"/>
+       <property name="houseno"/>
+      
+ </component>
+  </class>
+</hibernate-mapping>

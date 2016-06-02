@@ -1,0 +1,14 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<!DOCTYPE hibernate-mapping PUBLIC "-//Hibernate/Hibernate Mapping DTD 3.0//EN" "http://hibernate.sourceforge.net/hibernate-mapping-3.0.dtd">
+<hibernate-mapping>
+  <class name="com.kmit.Material" table="MATERIAL">
+      <id name="mcode">
+         <generator class="native"/>
+      </id>
+      <property name="cprice"/>
+      <property name="mname"/>
+      <property name="qoh"/>
+      <property name="whno"/>
+
+  </class>
+</hibernate-mapping>
